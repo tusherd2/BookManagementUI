@@ -1,0 +1,57 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-10 col-md-10 offset-lg-2 offset-md-2">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Login</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form #form="ngForm" (ngSubmit)="addBooks()">
+                            <div class="mb-3 row">
+                                <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input name="name" [(ngModel)]="addBookRequest.bookName" type="text" class="form-control" id="bookName">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="publisherName" class="col-sm-2 col-form-label">Publisher Name</label>
+                                <div class="col-sm-10">
+                                    <input name="pName" [(ngModel)]="addBookRequest.publisherName" type="text" class="form-control" id="publisherName">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="age" class="col-sm-2 col-form-label">Age</label>
+                                <div class="col-sm-10">
+                                    <input name="age" [(ngModel)]="addBookRequest.age" type="number" min="5" max="70" class="form-control" id="age">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="publishDate" class="col-sm-2 col-form-label">Publish Date</label>
+                                <div class="col-sm-10">
+                                    <input name="pDate" [(ngModel)]="addBookRequest.publishDate" type="date" class="form-control" id="publishDate">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="page" class="col-sm-2 col-form-label">Page</label>
+                                <div class="col-sm-10">
+                                    <input name="page" [(ngModel)]="addBookRequest.page" type="number" class="form-control" id="page">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input name="type" [(ngModel)]="addBookRequest.bookType" type="bookType" class="form-check-input" id="bookType">
+                                <label class="form-check-label" for="bookType">Book Type</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
